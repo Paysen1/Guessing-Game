@@ -60,3 +60,21 @@ h2 {
     margin-top: 0.6em;
     width: 60rem;
 }
+
+.done{
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5rem;
+    align-items: center;
+}
+
+#Ender {
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5rem;
+    align-items: center;
+}
+
+#input{
+    margin-left: 2rem;
+}

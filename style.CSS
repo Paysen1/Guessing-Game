@@ -4,19 +4,51 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+nav{
+    text-align: center;
+    word-spacing: 100rem;
+    font-size: 1.6rem;
+}
+
+#time{
+    align-items: end;
+
+}
+
 h2 {
     text-align: center;
     font-size: 2em;
 }
 
-.Questions {
+.Begin {
+    display: flex;
+    flex-direction: column;
+    margin-top: 7rem;
+    align-items: center;
+
+}
+
+.Questions1 {
     display: flex;
     flex-direction: column;
     margin-top: 7rem;
     align-items: center;
 }
 
-.Questions button{
+#StartBtn{
+    height: 100px;
+    background-color: rgb(169, 145, 190);
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 2em;
+    line-height: 16px;
+    padding: 20px 52px;
+    text-align: center;
+    margin-top: 0.6em;
+    width: 40rem;
+}
+
+.Questions1 button{
     height: 30px;
     background-color: rgb(169, 145, 190);
     border-radius: 10px;

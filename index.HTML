@@ -9,16 +9,63 @@
 </head>
 <body>
     <header>
-        <nav>Highscores <span>Timer</span></nav>
+        <nav>
+            <a href="high">Highscores</a>
+            <a id="time"></a>
+        </nav>
     </header>
     <main>
-        <form class="Questions">
-            <h2 id ="Qhead">Coding Challenge Quiz</h2>
-            <button id="A1">Ans 1</button>
-            <button id="A2">Ans 2</button>
-            <button id="A3">Ans 3</button>
-            <button id="A4">Ans 4</button>
-        </form>
+        <div id="Form1">
+            <form class="Begin">
+                <h2 id ="Qhead">Coding Challenge Quiz</h2>
+                <button id="StartBtn">Start</button>
+            </form>
+        </div>
+        <div id="form2" style="display: none;">       
+            <form class="Questions1">
+                <h2 id ="Qhead">Inside which HTML element do we put the JavaScript?</h2>
+                <button id="A1"> Script</button>
+                <button id="A2">JavaScript</button>
+                <button id="A3">Scripting</button>
+                <button id="A4">Js</button>
+            </form>
+        </div>
+        <div id="form3" style="display: none;">       
+            <form class="Questions1">
+                <h2 id ="Qhead">How do you write "Hello World" in an alert box?</h2>
+                <button id="3A1">mdg("Hello World");</button>
+                <button id="3A2">mdgBox("Hello World")</button>
+                <button id="3A3">alert("Hello World")</button>
+                <button id="3A4">alertBox("Hello World")</button>
+            </form>
+        </div>
+        <div id="form4" style="display: none;">       
+            <form class="Questions1">
+                <h2 id ="Qhead">How to write an IF statement in JavaScript?</h2>
+                <button id="4A1">if i = 5</button>
+                <button id="4A2">if i === 5 then</button>
+                <button id="4A3">if i = 5 then</button>
+                <button id="4A4">if (i == 5)</button>
+            </form>
+        </div>
+        <div id="form5" style="display: none;">       
+            <form class="Questions1">
+                <h2 id ="Qhead">How can you add a comment in a JavaScript?</h2>
+                <button id="5A1">//comment</button>
+                <button id="5A2">''comment</button>
+                <button id="5A3">--comment</button>
+                <button id="5A4">/..comment</button>
+            </form>
+        </div>
+        <div id="form6" style="display: none;">       
+            <form class="Questions1">
+                <h2 id ="Qhead">How do you create a JavaScript array?</h2>
+                <button id="6A1">var fruits = "banana", "apple", "peach";</button>
+                <button id="6A2">var fruits = ["banana", "apple", "peach"];</button>
+                <button id="6A3">var fruits = (1:"banana", 2:"apple", 3:"peach");</button>
+                <button id="6A4">var fruits = 1 = ("banana"), 2 = ("apple"), 3 = ("peach");</button>
+            </form>
+        </div>
     </main>
     <script src="script.js"></script>
 </body>

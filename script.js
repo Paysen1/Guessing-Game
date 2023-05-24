@@ -1,15 +1,9 @@
 var Begin = document.querySelector(".Begin")
 var Quest1 = document.querySelector(".Questions1")
-var A1 = document.querySelector("#A1")
-var A2 = document.querySelector("#A2")
-var A3 = document.querySelector("#A3")
-var A4 = document.querySelector("#A4")
-
 var countdownTime = 75;
 var timerElement =document.getElementById("time")
 
 var StartBtn = document.getElementById('StartBtn');
-StartBtn.addEventListener('click', showForm2)
 
 var ButtonA1 = document.getElementById('2A1');
 ButtonA1.addEventListener('click', showForm3)
@@ -35,7 +29,67 @@ StartBtn.addEventListener('click', function(event) {
   startCountdown();
 });
 
+// subtract 5 on wrong answer and on right ans change to next form
+ButtonA1.addEventListener("click", function (event){
+  if (isCorrect(ButtonA1)) {
+    showForm3(event);
+  } else {
+    event.preventDefault();
+    subtractTime(5);
+    showForm3(event);
+  }
+});
 
+ButtonA2.addEventListener("click", function (event) {
+  if (isCorrect(ButtonA2)) {
+    showForm4(event);
+  } else {
+    event.preventDefault();
+    subtractTime(5);
+    showForm4(event);
+  }
+});
+
+ButtonA3.addEventListener("click", function (event) {
+  if (isCorrect(ButtonA3)) {
+    showForm5(event);
+  } else {
+    event.preventDefault();
+    subtractTime(5);
+  }
+});
+
+ButtonA4.addEventListener("click", function (event) {
+  if (isCorrect(ButtonA4)) {
+    showForm6(event);
+  } else {
+    event.preventDefault();
+    subtractTime(5);
+    showForm6(event);
+  }
+});
+
+ButtonA5.addEventListener("click", function (event) {
+  if (isCorrect(ButtonA5)) {
+    showForm7(event);
+  } else {
+    event.preventDefault();
+    subtractTime(5);
+    showForm7(event);
+  }
+});
+
+function isCorrect(selectedAnswer) {
+  if (selectedAnswer.checked) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+
+
+//Timer Countdown
 function startCountdown() {
   var startTime = Date.now();
 
@@ -55,8 +109,14 @@ function startCountdown() {
   }, 1000); 
 }
 
+// -5 
+function subtractTime(seconds) {
+  var currentTime = parseInt(timerElement.textContent);
+  var newTime = currentTime - seconds;
+  timerElement.textContent = newTime + "s";
+}
 
-
+//Changes form with next form 
 function showForm2(event) {
     document.getElementById('form2').style.display = 'block';
     document.getElementById('Form1').style.display = 'none';
@@ -90,6 +150,7 @@ function showForm2(event) {
   function showForm7(event) {
     document.getElementById('form7').style.display = 'block';
     document.getElementById('form6').style.display = 'none';
+    clearInterval(timerInterval);
     event.preventDefault();
   }
 

@@ -6,7 +6,7 @@ body {
 
 nav{
     text-align: center;
-    word-spacing: 100rem;
+    word-spacing: 70rem;
     font-size: 1.6rem;
 }
 
@@ -61,7 +61,7 @@ h2 {
     width: 60rem;
 }
 
-.done{
+.done {
     justify-content: center;
     text-align: center;
     font-size: 1.5rem;

@@ -10,7 +10,7 @@
 <body>
     <header>
         <nav>
-            <a href="high">Highscores</a>
+            <a href="Highscores.html">Highscores</a>
             <a id="time"></a>
         </nav>
     </header>
@@ -24,7 +24,7 @@
         <div id="form2" style="display: none;">       
             <form class="Questions1">
                 <h2 id ="Qhead">Inside which HTML element do we put the JavaScript?</h2>
-                <button id="2A1"> Script</button>
+                <button id="2A1" data="True"> Script</button>
                 <button id="2A2">JavaScript</button>
                 <button id="2A3">Scripting</button>
                 <button id="2A4">Js</button>
@@ -35,7 +35,7 @@
                 <h2 id ="Qhead">How do you write "Hello World" in an alert box?</h2>
                 <button id="3A1">mdg("Hello World");</button>
                 <button id="3A2">mdgBox("Hello World")</button>
-                <button id="3A3">alert("Hello World")</button>
+                <button id="3A3" data="True">alert("Hello World")</button>
                 <button id="3A4">alertBox("Hello World")</button>
             </form>
         </div>
@@ -45,13 +45,13 @@
                 <button id="4A1">if i = 5</button>
                 <button id="4A2">if i === 5 then</button>
                 <button id="4A3">if i = 5 then</button>
-                <button id="4A4">if (i == 5)</button>
+                <button id="4A4" data="True">if (i == 5)</button>
             </form>
         </div>
         <div id="form5" style="display: none;">       
             <form class="Questions1">
                 <h2 id ="Qhead">How can you add a comment in a JavaScript?</h2>
-                <button id="5A1">//comment</button>
+                <button id="5A1" data="True">//comment</button>
                 <button id="5A2">''comment</button>
                 <button id="5A3">--comment</button>
                 <button id="5A4">/..comment</button>
@@ -61,7 +61,7 @@
             <form class="Questions1">
                 <h2 id ="Qhead">How do you create a JavaScript array?</h2>
                 <button id="6A1">var fruits = "banana", "apple", "peach";</button>
-                <button id="6A2">var fruits = ["banana", "apple", "peach"];</button>
+                <button id="6A2" data="True">var fruits = ["banana", "apple", "peach"];</button>
                 <button id="6A3">var fruits = (1:"banana", 2:"apple", 3:"peach");</button>
                 <button id="6A4">var fruits = 1 = ("banana"), 2 = ("apple"), 3 = ("peach");</button>
             </form>
@@ -69,17 +69,17 @@
         <div id="form7" style="display: none;">       
             <form class="done">
                 <h2>All Done!</h2>
-                <p id="Ender">Your final score was ""</p>
-                <p>Enter Initals <input type="text" id="Initals"><button id="SubmitBtn">Submit</button>
+                <p id="Ender">Your final score was <span id="score"></span></p>
+                <p>Enter Initals <input type="text" id="Initials"><button id="SubmitBtn">Submit</button></p>
             </form>
         </div>
         <div id="form8" style="display: none;">       
             <form class="done">
                 <h2>Highscores</h2>
-                <p>guh</p>
+                <p id="finalScore"></p>
                 <button>Go back</button><button>Clear Highscores</button>
             </form>
-        </div>
+        </div> 
     </main>
     <script src="script.js"></script>
 </body>

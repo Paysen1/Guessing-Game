@@ -4,12 +4,14 @@ var timerElement = document.getElementById("time");
 var initials = document.getElementById("Initials");
 var finalHighscore = document.getElementById("finalScore");
 var SubmitBtn = document.getElementById("SubmitBtn");
+var Score = document.getElementById("score");
 var ButtonA1 = document.getElementById('2A1');
 var ButtonA2 = document.getElementById('3A3');
 var ButtonA3 = document.getElementById('4A4');
 var ButtonA4 = document.getElementById('5A1');
 var ButtonA5 = document.getElementById('6A2');
 var StartBtn = document.getElementById('StartBtn');
+var HighScorePage = document.getElementById("HighScorePage");
 var timerInterval;
 
 ButtonA1.addEventListener('click', showForm3);
@@ -54,6 +56,34 @@ function createHighscore() {
   localStorage.setItem('highscore', highscore);
 }
 
+function saveLastScore() {
+  var highscore = localStorage.getItem('highscore');
+  localStorage.setItem('highscore', highscore);
+}
+
+function renderLastScore() {
+  var lastScore = localStorage.getItem('highscore');
+  if (lastScore !== null) {
+    finalHighscore.textContent = lastScore;
+  } else {
+    return;
+  }
+}
+
+
+SubmitBtn.addEventListener("click", function(event) {
+  event.preventDefault();
+  runToPage();
+  saveLastScore();
+  renderLastScore();
+});
+
+function init() {
+  renderLastScore();
+}
+
+init();
+
 function showForm2(event) {
   document.getElementById('form2').style.display = 'block';
   document.getElementById('Form1').style.display = 'none';
@@ -61,24 +91,37 @@ function showForm2(event) {
 }
 
 function showForm3(event) {
+  if (!isCorrect(ButtonA1)) {
+    subtractTime(5); 
+  }
+  console.log("no")
   document.getElementById('form3').style.display = 'block';
   document.getElementById('form2').style.display = 'none';
   event.preventDefault();
 }
 
 function showForm4(event) {
+  if (!isCorrect(ButtonA1)) {
+    subtractTime(5); 
+  }
   document.getElementById('form4').style.display = 'block';
   document.getElementById('form3').style.display = 'none';
   event.preventDefault();
 }
 
 function showForm5(event) {
+  if (!isCorrect(ButtonA1)) {
+    subtractTime(5); 
+  }
   document.getElementById('form5').style.display = 'block';
   document.getElementById('form4').style.display = 'none';
   event.preventDefault();
 }
 
 function showForm6(event) {
+  if (!isCorrect(ButtonA1)) {
+    subtractTime(5); 
+  }
   document.getElementById('form6').style.display = 'block';
   document.getElementById('form5').style.display = 'none';
   event.preventDefault();
@@ -107,11 +150,8 @@ document.addEventListener('DOMContentLoaded', function() {
   createHighscore();
 });
 
-
   
 //WHEN I answer a question incorrectly
 //THEN time is subtracted from the clock
-//WHEN all questions are answered or the timer reaches 0
-//THEN the game is over
 //WHEN the game is over
 //THEN I can save my initials and my score

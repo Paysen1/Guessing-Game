@@ -1,1 +1,2 @@
 # Guessing-Game
+This guessing game was a hugeee challenge for me, I will admit js has been my biggest opponent out of over everything else in this course. This did force me to learn more and make some more contextual thinking type decisions. I could have just dont arrays and loops to make this much easier on me but I wanted to try and do it in this way. I feel this did teach me many thing but it also made me feel like I know nothing lol. But anyways this is what I could accomplish on my own. I will do better in the future and will be studying js over the long weekend here.
